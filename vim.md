@@ -2,6 +2,35 @@
 
 # Search
 
-If you want to search for stuff in vim you can use `/` to search backwards and `?` to search forwards
+Source: https://linuxize.com/post/vim-search
 
-Example: `/foo` will search the rest of the document (from the cursor position) for the next instance of `foo`. `?foo` will search backwards from the cursor.
+## Basic search
+
+* `/foo` will search for the next occurrence of `"foo"` (from where the cursor is positioned)
+* `?foo` will search for the previous occurrence of `"foo"` (from where the cursor is positioned)
+* `/\<foo` will search for the next word that *starts with* `"foo"`
+* Similarily `/foo\>` will search for the next word that *ends with* `"foo"`
+* And you can combine it into `/\<foo\>` to search for *the exact word* `"foo"`
+* Use `n` to go to the next result, and `N` to go to the previous result.
+
+## Search for the current word
+
+You can also search for the "current word" (meaning the word the cursor is currently "on") by pressing:
+
+*  `*` to search forward
+*  `#` to search backwards
+*  Use `*` and `#` respectively to search for the next or previous occurrence of the word
+
+## Search history
+
+* Type `/` or `?` and use the up and down arrows to see the previous search history
+
+## Case sensitivity
+
+By default searches are case sensitive.
+
+You can change the case sensitivity behaviour from either the vim command line or the `~/.vimrc` like so:
+
+* `:set ignorecase`/`ic` to... ignore the casing
+* `set: noignorecase`/`noic` to make it case sensitive again
+* 
