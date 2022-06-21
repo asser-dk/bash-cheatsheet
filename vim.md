@@ -6,8 +6,8 @@ Source: https://linuxize.com/post/vim-search
 
 ## Basic search
 
-* `/foo` will search for the next occurrence of `"foo"` (from where the cursor is positioned)
-* `?foo` will search for the previous occurrence of `"foo"` (from where the cursor is positioned)
+* `/foo` will search for the next word that *contains* `"foo"`
+* `?foo` will search for the previous word that *contains* `"foo"`
 * `/\<foo` will search for the next word that *starts with* `"foo"`
 * Similarily `/foo\>` will search for the next word that *ends with* `"foo"`
 * And you can combine it into `/\<foo\>` to search for *the exact word* `"foo"`
@@ -19,7 +19,7 @@ You can also search for the "current word" (meaning the word the cursor is curre
 
 *  `*` to search forward
 *  `#` to search backwards
-*  Use `*` and `#` respectively to search for the next or previous occurrence of the word
+*  Use `*` and `#` repeatedly to search for the next or previous occurrence of said word
 
 ## Search history
 
