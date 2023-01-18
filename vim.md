@@ -33,4 +33,11 @@ You can change the case sensitivity behaviour from either the vim command line o
 
 * `:set ignorecase`/`ic` to... ignore the casing
 * `set: noignorecase`/`noic` to make it case sensitive again
-* 
+
+## Change line endings to unix
+
+If you manage to download a file with windows line endings (^M errors) do the following:
+
+1. Open the file in vim
+2. Execute the command `:set ff=unix`
+3. Save and quit (`:wq`)
